@@ -1,0 +1,29 @@
+#crazy-camera {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#crazy-crazy {
+    text-align: center;
+    font-size: 300px;
+    line-height: 300px;
+    font-family: 'Hanged Letters';
+}
+#crazy-crazy span {
+    position: relative;
+    top: -320px;
+    transition-property: top;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+#crazy-crazy span.visible {
+    top: 0;
+}
+#crazy-enough {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    font-size: 100px;
+}
