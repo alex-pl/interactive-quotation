@@ -35,6 +35,10 @@ section {
     color: blue;
     stroke: blue;
 }
+.text-color-darker {
+    color: darkblue;
+    stroke: darkblue;
+}
 
 .background-color-light {
     background: #fff;
@@ -47,4 +51,8 @@ section {
 .background-color-dark {
     background: blue;
     fill: blue;
+}
+.background-color-darker {
+    background: darkblue;
+    fill: darkblue;
 }
