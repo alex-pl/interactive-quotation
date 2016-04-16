@@ -4,11 +4,15 @@
 
 .world-headline-small {
     font-size: 2em;
+    font-family: "Segoe UI";
+    
     color: #DEDEDE;
 }
 
 .world-headline-big {
     font-size: 5em;
+    font-family: "Segoe UI";
+    
     color: white;
 }
 
