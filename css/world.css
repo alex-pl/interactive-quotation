@@ -11,3 +11,12 @@
     font-size: 5em;
     color: white;
 }
+
+.world-globe {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
