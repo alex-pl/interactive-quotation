@@ -8,7 +8,7 @@ $(function () {
         .then(function (html) {
             $('body').html(html);
             
-            if (i <= pages) {
+            if (i < pages.length) {
                 loadNext();
             }
         });
