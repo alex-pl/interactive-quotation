@@ -1,0 +1,38 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: red;
+    display: none;
+}
+.active {
+    display: block;
+}
+
+.text-color-light {
+    color: #fff;
+}
+.text-color-medium {
+    color: rgba(255, 255, 255, .7);
+}
+.text-color-dark {
+    color: blue;
+}
+
+.background-color-light {
+    background: #fff;
+}
+.background-color-medium {
+    background: rgba(255, 255, 255, .7);
+}
+.background-color-dark {
+    background: blue
+}
