@@ -1,7 +1,19 @@
 $(function () {
+    
+    var pages = ['crazy', 'world'],
+        i = 0;
 
-    $.get('html/crazy.html', function (html) {
-        $('main').append(html);
-    });
+    function loadNext() {
+        $.get('html/' + pages[i++] + '.html')
+        .then(function (html) {
+            $('body').html(html);
+            
+            if (i <= pages) {
+                loadNext();
+            }
+        });
+    }
+    
+    loadNext();
     
 });
