@@ -6,7 +6,7 @@ $(function () {
     function loadNext() {
         $.get('html/' + pages[i++] + '.html')
         .then(function (html) {
-            $('body').html(html);
+            $('main').append(html);
             
             if (i < pages.length) {
                 loadNext();

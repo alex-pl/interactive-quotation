@@ -17,6 +17,12 @@ section {
     display: block;
 }
 
+.default-content {
+    outline: 1px solid red;
+    width: 800px;
+    height: 600px;
+}
+
 .text-color-light {
     color: #fff;
     stroke: #fff;
