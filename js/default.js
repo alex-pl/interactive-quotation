@@ -61,7 +61,7 @@ function ChangeGlobalColors(event)
     
     var rgbMedium = hsv2rgb(hue, saturation - 0.35, 1);
     var rgbDark = hsv2rgb(hue, saturation, 1);
-    var rgbDarker = hsv2rgb(hue, saturation, 0.7);
+    var rgbDarker = hsv2rgb(hue, saturation, 0.5);
     
     var colorMedium = 'rgb(' + rgbMedium.r + ', ' + rgbMedium.g + ', ' + rgbMedium.b + ')';
     var colorDark = 'rgb(' + rgbDark.r + ', ' + rgbDark.g + ', ' + rgbDark.b + ')';
