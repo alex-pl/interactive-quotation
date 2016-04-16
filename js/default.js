@@ -27,20 +27,67 @@ function ChangeGlobalColors(event)
     var y = event.clientY;
     
     var hue = x / screenWidth;
-    var saturation = y / screenHeight;
+    var saturation = (y + screenHeight) / (screenHeight + screenHeight);
     
-    var rgb = hsv2rgb(hue, 1, 1);
-    //alert(rgb.r + ' ' + rgb.g + ' ' + rgb.b);
-    var color = 'rgb(' + rgb.r + ', ' + rgb.g + ', ' + rgb.b + ')';
+    var rgbMedium = hsv2rgb(hue, saturation - 0.35, 1);
+    var rgbDark = hsv2rgb(hue, saturation, 1);
+    var rgbDarker = hsv2rgb(hue, saturation, 0.7);
+    
+    var colorMedium = 'rgb(' + rgbMedium.r + ', ' + rgbMedium.g + ', ' + rgbMedium.b + ')';
+    var colorDark = 'rgb(' + rgbDark.r + ', ' + rgbDark.g + ', ' + rgbDark.b + ')';
+    var colorDarker = 'rgb(' + rgbDarker.r + ', ' + rgbDarker.g + ', ' + rgbDarker.b + ')';
+    
+    // noch für die anderen farbklassen implementieren
+    
+    
     
     // Apply style
-    var elements = document.getElementsByClassName('background-color-dark');
+    var elements;
     
+    // Medium
+    elements = document.getElementsByClassName('background-color-medium');
     for (var i = 0; i < elements.length; i++)
     {
-        elements[i].style.fill = color;
-        elements[i].style.backgroundColor = color;
+        elements[i].style.fill = colorMedium;
+        elements[i].style.backgroundColor = colorMedium;
     }   
+    
+    elements = document.getElementsByClassName('text-color-medium');
+    for (var i = 0; i < elements.length; i++)
+    {
+        elements[i].style.stroke = colorMedium;
+        elements[i].style.color = colorMedium;
+    }   
+    
+    // Dark
+    elements = document.getElementsByClassName('background-color-dark');
+    for (var i = 0; i < elements.length; i++)
+    {
+        elements[i].style.fill = colorDark;
+        elements[i].style.backgroundColor = colorDark;
+    }   
+    
+    elements = document.getElementsByClassName('text-color-dark');
+    for (var i = 0; i < elements.length; i++)
+    {
+        elements[i].style.stroke = colorDark;
+        elements[i].style.color = colorDark;
+    }  
+    
+    // Darker
+    elements = document.getElementsByClassName('background-color-darker');
+    for (var i = 0; i < elements.length; i++)
+    {
+        elements[i].style.fill = colorDarker;
+        elements[i].style.backgroundColor = colorDarker;
+    }   
+    
+    elements = document.getElementsByClassName('text-color-darker');
+    for (var i = 0; i < elements.length; i++)
+    {
+        elements[i].style.stroke = colorDarker;
+        elements[i].style.color = colorDarker;
+    }    
 }
 
 // http://stackoverflow.com/questions/17242144/javascript-convert-hsb-hsv-color-to-rgb-accurately
