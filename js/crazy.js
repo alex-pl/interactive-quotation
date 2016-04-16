@@ -10,8 +10,6 @@ function crazy() {
         var letter = letters[index++]; 
         letter.classList.add('visible');
         
-        console.log(letter);
-        
         // clear interval if finished
         if (index >= letters.length) {
             window.clearInterval(interval);
@@ -22,3 +20,5 @@ function crazy() {
     interval = window.setInterval(showLetter, 1500);
     
 }
+
+pageCallbacks['crazy'] = crazy;
