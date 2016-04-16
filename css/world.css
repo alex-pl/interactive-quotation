@@ -1,0 +1,13 @@
+.world {
+    background-color: cornflowerblue;      
+}
+
+.world-headline-small {
+    font-size: 2em;
+    color: #DEDEDE;
+}
+
+.world-headline-big {
+    font-size: 5em;
+    color: white;
+}
