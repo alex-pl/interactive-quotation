@@ -1,10 +1,14 @@
-#crazy-camera {
+#crazy-video {
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
 }
 
+.crazy .default-content {
+    position: relative;
+    z-index: 10;
+}
 #crazy-crazy {
     text-align: center;
     font-size: 300px;
@@ -19,11 +23,11 @@
     transition-timing-function: ease;
 }
 #crazy-crazy span.visible {
-    top: 0;
+    top: 60px;
 }
 #crazy-enough {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
+    text-align: center;
     font-size: 100px;
+    padding-top: 100px;
+    font-family: fantasy;
 }
