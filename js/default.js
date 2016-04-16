@@ -1,20 +1,50 @@
+var pageCallbacks = {};
+
 $(function () {
     
     var pages = ['crazy', 'world'],
         i = 0;
 
-    function loadNext() {
+    function loadNextPage(resolve) {
         $.get('html/' + pages[i++] + '.html')
         .then(function (html) {
             $('main').append(html);
             
             if (i < pages.length) {
-                loadNext();
+                loadNextPage(resolve);
+            } else {
+                resolve();
             }
         });
     }
+
+    function loadPages() {
+        return new Promise(function (resolve) {
+            loadNextPage(resolve);
+        });
+    }
     
-    loadNext();
+    function initialize() {
+        // set active page
+        var activePage = 0,
+            hash = window.location.hash.substr(1);
+        
+        for (var i = 0; i < pages.length; i++) {
+            var page = pages[i];
+            if (page === hash) {
+                activePage = i;
+                break;
+            }
+        }
+        
+        document.getElementsByClassName(page)[0].classList.add('active');
+        
+        // start page script if available
+        typeof pageCallbacks[pages[i]] == 'function' && pageCallbacks[pages[i]]();
+    }
+    
+    loadPages().then(initialize)
+    
     
 });
 
