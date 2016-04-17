@@ -1,25 +1,40 @@
+
 .world {
     background-color: lightgray;      
 }
 
-.world-headline-small {
-    font-size: 2em;
-    font-family: "Segoe UI";
-    
-    color: #DEDEDE;
+.world-headline {
+    margin: 0 auto;
+    width: 800px;
+    margin-top: 30px;
 }
 
-.world-headline-big {
+.world-headline-small {
     font-size: 5em;
     font-family: "Blinded by desire";
     
-    color: white;
+    margin-left: 100px;
+    margin-top: 20px;
+    
+    float:left;
+    
+    color: black;
+}
+
+.world-headline-big {
+    
+    float:left;
+    
+    margin-left: 50px;
+    
+    font-size: 8em;
+    font-family: "Blinded by desire";
 }
 
 .world-globe {
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
-    margin: 75px auto 0px auto;
+    width: 350px;
+    height: 350px;
+    margin: 220px auto 0px auto;
     display: block;
 }
