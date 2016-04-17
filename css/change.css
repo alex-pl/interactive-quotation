@@ -1,0 +1,24 @@
+#change-they, #change-can {
+    font-family: 'varsity_regular';
+    width: 360px;
+    text-align: center;
+    position: relative;
+    font-size: 40px;
+    display: block;
+    transform-origin: center center;
+    transform: scale(0);
+    transition-property: transform;
+    transition-duration: 1.5s;
+}
+
+#change-they {
+    margin-top: -600px;
+    top: 150px;
+}
+#change-can {
+    top: 350px;
+}
+
+#change-they.visible, #change-can.visible {
+    transform: scale(2.5);
+}
