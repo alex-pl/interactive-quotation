@@ -33,6 +33,11 @@
     src: local('varsity_regular'), url('../fonts/varsity_regular/varsity_regular.ttf');
 }
 
+@font-face {
+    font-family: 'TravelingTypewriter';
+    src: local('TravelingTypewriter'), url('../fonts/traveling_typewriter/TravelingTypewriter.ttf');
+}
+
 
 
 body, html {

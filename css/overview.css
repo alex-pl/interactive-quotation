@@ -1,0 +1,15 @@
+.overview-text {
+    text-align: center;
+    font-size: 41px;
+    line-height: 80px;
+    font-weight: bold;
+    font-family: 'TravelingTypewriter';
+    padding-top: 80px;
+}
+
+#overview-steve {
+    font-family: 'Niko';
+    font-size: 30px;
+    margin-top: 30px;
+    display: block;
+}
