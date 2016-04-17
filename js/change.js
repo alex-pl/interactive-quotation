@@ -26,7 +26,7 @@
 
                     }, 'easeOutBounce');
 
-                    window.setTimeout(showNextPage, 3000);
+                    window.setTimeout(showNextPage, 3500);
                 }, 1200);
             }, 1000);
         }, 1000);
