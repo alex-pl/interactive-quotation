@@ -22,7 +22,7 @@ function because_init()
     var because_ones_start = 2300;
     var because_that_start = 3300;
     var because_are_start = 3900;
-    
+    var next = 6000;
     
     setTimeout(function () 
         {
@@ -84,4 +84,6 @@ function because_init()
             because_are.classList.add('because-plop-animation'); 
         }, 
         because_are_start);
+
+    window.setTimeout(showNextPage, next);
 }

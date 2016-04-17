@@ -10,4 +10,7 @@ function think_init()
             think_cloud.classList.add('think-cloud-animation'); 
         }, 
         800);
+        
+    
+    window.setTimeout(showNextPage, 5000);
 }

@@ -24,4 +24,7 @@ function ones_init()
             ones_ones.classList.add('ones-animation'); 
         }, 
         3500);
+        
+    
+    window.setTimeout(showNextPage, 5500);
 }
