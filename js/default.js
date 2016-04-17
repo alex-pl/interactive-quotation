@@ -24,6 +24,15 @@ $(function () {
         });
     }
     
+    function scaleDefaultContent() {
+        var container = $('.default-content'),
+        
+            contentHeight = container.height(),
+            windowHeight = $(window).height();
+        
+        container.css('transform', 'scale(' + (windowHeight / contentHeight) + ')');
+    }
+    
     function initialize() {
         // set active page
         var activePage = 0,
@@ -41,10 +50,12 @@ $(function () {
         
         // start page script if available
         typeof pageCallbacks[pages[i]] == 'function' && pageCallbacks[pages[i]]();
+        
+        scaleDefaultContent();
+        window.addEventListener('resize', scaleDefaultContent, false);
     }
     
-    loadPages().then(initialize)
-    
+    loadPages().then(initialize);
     
 });
 
