@@ -1,0 +1,56 @@
+#ones-are {
+    color: white;
+    font-family: "Niko";
+    font-size: 80px;
+    
+    margin-top: 40px;
+    margin-left: 330px;
+    
+    display: inline-block;
+    
+    transform: scale(0);
+    transform-origin: center;
+}
+
+#ones-the {
+    color: white;
+    font-family: "Niko";
+    font-size: 80px;
+    
+    margin-top: 40px;
+    margin-left: 420px;
+    
+    display: inline-block;  
+    
+    transform: scale(0);
+    transform-origin: center;  
+}
+
+#ones-ones {
+    color: white;
+    font-family: "Niko";
+    font-size: 80px;
+    
+    margin-top: 40px;
+    margin-left: 250px;
+    
+    display: inline-block;
+    
+    transform: scale(0);
+    transform-origin: center;
+}
+
+.ones-animation {
+    animation: ones-animation-keyframes 1.0s ease forwards;
+}
+
+@keyframes ones-animation-keyframes {
+  0% {
+    transform: scale(50);
+    transform-origin: center;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: center;
+  }
+}
