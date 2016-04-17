@@ -106,6 +106,8 @@
     
     function startEnough() {
         document.getElementById('crazy-enough').classList.add('visible');
+        
+        window.setTimeout(showNextPage, 10000);
     }
     
     function reset() {

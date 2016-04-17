@@ -3,7 +3,9 @@ var pageCallbacks = {}, // deprecated, use onPageStart instead!
     //onPageVisible = {},
     onPageStart = {},
     //onPageStop = {},
-    onPageHidden = {};
+    onPageHidden = {},
+    
+    showNextPage;
 
 $(function () {
     
@@ -73,6 +75,25 @@ $(function () {
         scaleDefaultContent();
         window.addEventListener('resize', scaleDefaultContent, false);
     }
+    
+    showNextPage = function () {
+        
+        // hide old page
+        document.getElementsByClassName(pages[activePage])[0].classList.remove('active');
+        typeof onPageHidden[pages[activePage]] == 'function' && onPageHidden[pages[activePage]]();
+        
+        // select next page
+        if (++activePage >= pages.length) {
+            activePage = 0;
+        }
+        
+        // show new page
+        document.getElementsByClassName(pages[activePage])[0].classList.add('active');
+        // start page script if available
+        typeof onPageStart[pages[activePage]] == 'function' && onPageStart[pages[activePage]]();
+        typeof pageCallbacks[pages[activePage]] == 'function' && pageCallbacks[pages[activePage]]();
+        
+    };
     
     loadPages().then(initialize);
     

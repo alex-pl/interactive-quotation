@@ -26,6 +26,7 @@
 
                     }, 'easeOutBounce');
 
+                    window.setTimeout(showNextPage, 3000);
                 }, 1200);
             }, 1000);
         }, 1000);
