@@ -1,4 +1,9 @@
 @font-face {
+    font-family: 'Little Swag';
+    src: local('Little Swag'), url('../fonts/little_swag/KGALittleSwag.ttf');
+}
+
+@font-face {
     font-family: 'niko';
     src: local('niko'), url('../fonts/niko/NikoFont.ttf');
 }
