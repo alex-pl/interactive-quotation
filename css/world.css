@@ -11,7 +11,7 @@
 
 .world-headline-big {
     font-size: 5em;
-    font-family: "Segoe UI";
+    font-family: "Blinded by desire";
     
     color: white;
 }
@@ -20,6 +20,6 @@
     border-radius: 50%;
     width: 300px;
     height: 300px;
-    margin: 100px auto 0px auto;
+    margin: 75px auto 0px auto;
     display: block;
 }
