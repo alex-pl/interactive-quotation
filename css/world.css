@@ -1,8 +1,4 @@
 
-.world {
-    /* background-color: lightgray; */
-}
-
 .world-headline {
     margin: 0 auto;
     width: 800px;
@@ -37,4 +33,16 @@
     height: 350px;
     margin: 220px auto 0px auto;
     display: block;
+}
+
+#world-path {
+    margin-top: -800px;
+    margin-left: 225px;
+    width: 350px;
+    height: 350px;
+    display:inline-block;
+    position:relative;
+    top: -15px;
+    
+    stroke: red;
 }
