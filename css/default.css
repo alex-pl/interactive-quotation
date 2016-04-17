@@ -1,4 +1,19 @@
 @font-face {
+    font-family: 'niko';
+    src: local('niko'), url('../fonts/niko/NikoFont.ttf');
+}
+
+@font-face {
+    font-family: 'Mix Freo';
+    src: local('Mix Freo'), url('../fonts/mix_freo/Mix_Freo.otf');
+}
+
+@font-face {
+    font-family: 'Blinded by desire';
+    src: local('Blinded by desire'), url('../fonts/blinded_by_desire/Blinded_by_desire.ttf');
+}
+
+@font-face {
     font-family: 'Hanged Letters';
     src: local('Hanged Letters'), url('../fonts/hanging_letters/Hanged Letters.ttf');
 }

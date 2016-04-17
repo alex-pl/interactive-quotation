@@ -1,3 +1,51 @@
-.think {
+.think-speechbubble {
+    margin: 0 auto;
+    width: 900px;
+ 
+    margin-left: 50px; 
+    margin-top: 50px;
     
+    transform: scale(0);
+}
+
+.think-text {
+    stroke: #DFDFDF !important;
+    fill: #DFDFDF !important;
+    font-family: "Mix Freo" !important;
+    font-size: 20px !important;
+}
+
+.think-headline-word-to {
+    margin-top: -1150px;
+    margin-left: 200px;
+    
+    color:white;
+    
+    font-size: 60px;
+    font-family: "Niko" !important;
+}
+
+.think-headline-word-think {
+    margin-top: -70px;
+    margin-left: 330px;
+    
+    color:white;
+    
+    font-size: 80px;
+    font-family: "Niko" !important;
+}
+
+.think-cloud-animation {
+    animation: think-cloud-animation-keyframes 0.8s ease forwards;
+}
+
+@keyframes think-cloud-animation-keyframes {
+  0% {
+    transform: scale(0);
+    transform-origin: 400px 300px;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: 400px 300px;
+  }
 }
