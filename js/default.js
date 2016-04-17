@@ -9,7 +9,7 @@ var pageCallbacks = {}, // deprecated, use onPageStart instead!
 
 $(function () {
     
-    var pages = ['intro', 'because', 'crazy', 'think', 'change', 'world', 'ones', 'do', 'steve', 'overview'],
+    var pages = ['intro', 'because', 'crazy', 'think', 'change', 'world', 'ones', 'do', 'overview'],
         i = 0;
 
     function loadNextPage(resolve) {

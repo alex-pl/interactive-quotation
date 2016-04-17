@@ -1,0 +1,19 @@
+.intro .default-content {
+    
+    text-align: center;
+    font-family: 'Bergamot Ornaments';
+    font-size: 100px;
+    padding-top: 60px;
+    
+}
+
+.intro button {
+    
+    display: block;
+    margin: 0 auto;
+    font-size: 100px;
+    
+    border: none;
+    background: transparent;
+    
+}
