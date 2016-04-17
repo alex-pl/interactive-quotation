@@ -97,10 +97,15 @@
             // clear interval if finished
             if (index >= letters.length) {
                 window.clearInterval(interval);
+                startEnough();
             }
         }
 
         interval = window.setInterval(showLetter, 100);
+    }
+    
+    function startEnough() {
+        document.getElementById('crazy-enough').classList.add('visible');
     }
     
     function reset() {
