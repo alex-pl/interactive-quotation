@@ -36,7 +36,7 @@ var startWebcam = function() {
         video = null,
         not_supported = 'Der Zugriff auf die Webcam ist fehlgeschlagen. Bitte verwenden Sie für den Zugriff auf die Fotofunktion eine aktuelle Version von Firefox, Chrome, Opera oder Edge und stellen sie sicher, dass keine zweite Anwendung auf die Webcam zugreift.';
 
-    function init() {alert('init')
+    function init() {
         video = document.getElementById('crazy-video');
         
         navigator.getMedia = (navigator.getUserMedia ||
