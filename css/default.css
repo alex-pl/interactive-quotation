@@ -23,7 +23,7 @@ section {
 }
 
 .default-content {
-    outline: 1px solid red;
+    border: 1px solid red;
     width: 800px;
     height: 600px;
     margin: 0 auto;
