@@ -25,9 +25,40 @@
 #crazy-crazy span.visible {
     top: 60px;
 }
+
+
 #crazy-enough {
     text-align: center;
-    font-size: 100px;
+    font-size: 70px;
     padding-top: 100px;
-    font-family: fantasy;
+    font-family: 'varsity_regular';
+    position: relative;
+    top: 170px;
+    left: -100px;
+    transform: rotate(0deg);
+    transition-property: top left transform;
+    transition-duration: 2s;
+    transition-delay: 1.5s;
 }
+#crazy-enough b {
+    animation: flap .7s linear 0s infinite alternate;
+    font-family: 'Bergamot Ornaments';
+    transform-origin: center right;
+    transform: scaleX(1);
+    display: inline-block;
+}
+#crazy-enough b:last-child {
+    transform-origin: center left;
+}
+#crazy-enough.visible {
+    top: 0;
+    left: -40px;
+    transform: rotate(10deg);
+}
+
+@keyframes flap {
+    from { transform: scaleX(1); }
+    50% { transform: scaleX(.2); }
+    to { transform: scaleX(1); }
+}
+

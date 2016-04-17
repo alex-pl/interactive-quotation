@@ -23,6 +23,13 @@
     src: local('Bergamot Ornaments'), url('../fonts/bergamont_ornaments/Bergamot Ornaments.ttf');
 }
 
+@font-face {
+    font-family: 'varsity_regular';
+    src: local('varsity_regular'), url('../fonts/varsity_regular/varsity_regular.ttf');
+}
+
+
+
 body, html {
     width: 100%;
     height: 100%;
