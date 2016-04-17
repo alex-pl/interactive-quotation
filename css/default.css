@@ -3,6 +3,11 @@
     src: local('Hanged Letters'), url('../fonts/hanging_letters/Hanged Letters.ttf');
 }
 
+@font-face {
+    font-family: 'Bergamot Ornaments';
+    src: local('Bergamot Ornaments'), url('../fonts/bergamont_ornaments/Bergamot Ornaments.ttf');
+}
+
 body, html {
     width: 100%;
     height: 100%;
