@@ -1,34 +1,10 @@
 'use strict';
 
-function crazy() {
+(function () {
 
-    var interval,
-        index = 0,
-        letters = document.querySelectorAll('#crazy-crazy span');
-    
-    function showLetter() {
+    var letters,
         
-        // show letter
-        var letter = letters[index++]; 
-        letter.classList.add('visible');
-        
-        // clear interval if finished
-        if (index >= letters.length) {
-            window.clearInterval(interval);
-        }
-        
-    }
-    
-    interval = window.setInterval(showLetter, 100);
-    
-    // TODO start this when general thing is loaded (init-Promise!)
-    startWebcam();
-    
-}
-
-var startWebcam = function() {
-    
-    var videoWidth,
+        videoWidth,
         videoHeight,
         marginTop,
         marginLeft,
@@ -36,7 +12,10 @@ var startWebcam = function() {
         video = null,
         not_supported = 'Der Zugriff auf die Webcam ist fehlgeschlagen. Bitte verwenden Sie für den Zugriff auf die Fotofunktion eine aktuelle Version von Firefox, Chrome, Opera oder Edge und stellen sie sicher, dass keine zweite Anwendung auf die Webcam zugreift.';
 
-    function init() {
+    function init() {alert('init')
+        
+        letters = document.querySelectorAll('#crazy-crazy span');
+        
         video = document.getElementById('crazy-video');
         
         navigator.getMedia = (navigator.getUserMedia ||
@@ -105,10 +84,33 @@ var startWebcam = function() {
         }, false);
     
     }
+    
+    function start() {
+        var interval,
+            index = 0;
 
-    init();
-    //window.addEventListener('load', init, false);
+        function showLetter() {
+            // show letter
+            var letter = letters[index++]; 
+            letter.classList.add('visible');
 
-}
+            // clear interval if finished
+            if (index >= letters.length) {
+                window.clearInterval(interval);
+            }
+        }
 
-pageCallbacks['crazy'] = crazy;
+        interval = window.setInterval(showLetter, 100);
+    }
+    
+    function reset() {
+        for (var i = 0; i < letters.length; i++) {
+            var letter = letters[i];
+            letter.classList.remove('visible');
+        }
+    }
+
+    onPageLoaded['crazy'] = init;
+    onPageStart['crazy'] = start;
+    onPageHidden['crazy'] = reset;
+})();
