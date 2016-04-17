@@ -29,7 +29,7 @@
 }
 
 .do-left-animation {
-    animation: do-left-animation-keyframes 4s ease forwards;
+    animation: do-left-animation-keyframes 3s ease forwards;
 }
 
 @keyframes do-left-animation-keyframes {
@@ -44,7 +44,7 @@
 }
 
 .do-right-animation {
-    animation: do-right-animation-keyframes 4s ease forwards;
+    animation: do-right-animation-keyframes 3s ease forwards;
 }
 
 @keyframes do-right-animation-keyframes {

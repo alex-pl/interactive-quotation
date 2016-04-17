@@ -9,13 +9,13 @@ function do_init()
         {
             do_that.classList.add('do-left-animation'); 
         }, 
-        1000);
+        1);
      
     setTimeout(function () 
         {
             do_do.classList.add('do-right-animation'); 
         }, 
-        2000);
+        1000);
         
     window.setTimeout(showNextPage, 9500);
 }
