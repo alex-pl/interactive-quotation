@@ -1,4 +1,9 @@
-var pageCallbacks = {};
+var pageCallbacks = {}, // deprecated, use onPageStart instead!
+    onPageLoaded = {},
+    //onPageVisible = {},
+    onPageStart = {},
+    //onPageStop = {},
+    onPageHidden = {};
 
 $(function () {
     
@@ -6,9 +11,12 @@ $(function () {
         i = 0;
 
     function loadNextPage(resolve) {
-        $.get('html/' + pages[i++] + '.html')
+        $.get('html/' + pages[i] + '.html')
         .then(function (html) {
             $('main').append(html);
+            typeof onPageLoaded[pages[i]] == 'function' && onPageLoaded[pages[i]]();
+            
+            i++;
             
             if (i < pages.length) {
                 loadNextPage(resolve);
@@ -30,7 +38,9 @@ $(function () {
         // set active page
         var hash = window.location.hash.substr(1);
         
+        // hide old page
         document.getElementsByClassName(pages[activePage])[0].classList.remove('active');
+        typeof onPageHidden[pages[activePage]] == 'function' && onPageHidden[pages[activePage]]();
         
         for (var i = 0; i < pages.length; i++) {
             var page = pages[i];
@@ -43,6 +53,7 @@ $(function () {
         document.getElementsByClassName(page)[0].classList.add('active');
         
         // start page script if available
+        typeof onPageStart[pages[i]] == 'function' && onPageStart[pages[i]]();
         typeof pageCallbacks[pages[i]] == 'function' && pageCallbacks[pages[i]]();
     }
     
