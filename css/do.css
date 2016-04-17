@@ -1,0 +1,59 @@
+#do-that {
+    color: white;
+    font-family: "perfectly amicable";
+    font-size: 200px;
+    
+    margin-top: 100px;
+    margin-left: 300px;
+    
+    display: inline-block;
+    
+    
+    transform: translateX(-2000px);
+    transform-origin: center;
+}
+
+#do-do {
+    color: white;
+    font-family: "perfectly amicable";
+    font-size: 200px;
+    
+    margin-top: -50px;
+    margin-left: 300px;
+    
+    display: inline-block;   
+    
+    
+    transform: translateX(2000px);
+    transform-origin: center; 
+}
+
+.do-left-animation {
+    animation: do-left-animation-keyframes 4s ease forwards;
+}
+
+@keyframes do-left-animation-keyframes {
+  0% {
+    transform: translateX(-2000px);
+    transform-origin: center;
+  }
+  100% {
+    transform: translateX(0);
+    transform-origin: center;
+  }
+}
+
+.do-right-animation {
+    animation: do-right-animation-keyframes 4s ease forwards;
+}
+
+@keyframes do-right-animation-keyframes {
+  0% {
+    transform: translateX(2000px);
+    transform-origin: center;
+  }
+  100% {
+    transform: translateX(0);
+    transform-origin: center;
+  }
+}

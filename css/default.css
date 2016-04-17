@@ -1,4 +1,9 @@
 @font-face {
+    font-family: 'perfectly amicable';
+    src: local('perfectly amicable'), url('../fonts/perfectly amicable/perfectly amicable.ttf');
+}
+
+@font-face {
     font-family: 'Little Swag';
     src: local('Little Swag'), url('../fonts/little_swag/KGALittleSwag.ttf');
 }
