@@ -1,6 +1,6 @@
 
 .world {
-    background-color: lightgray;      
+    /* background-color: lightgray; */
 }
 
 .world-headline {
@@ -18,7 +18,7 @@
     
     float:left;
     
-    color: black;
+/*    color: black;*/
 }
 
 .world-headline-big {
